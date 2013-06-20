@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+  "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+  <definition name="commonPage" template="/WEB-INF/tiles/layouts/topmenulayout.jsp">
+    <put-attribute name="header" value="/WEB-INF/jsp/common/header.jsp" />
+    <put-attribute name="menu" value="/WEB-INF/jsp/common/menu.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/jsp/common/footer.jsp" />
+    <put-attribute name="title" value="DemoProject" />
+  </definition>
+
+  <definition name="myhello" extends="commonPage">
+    <put-attribute name="title" value="DemoProject : myhello" />
+    <put-attribute name="body" value="/WEB-INF/jsp/myhello.jsp" />
+  </definition>
+  <definition name="error" extends="commonPage">
+    <put-attribute name="title" value="DemoProject : Error page" />
+    <put-attribute name="body" value="/WEB-INF/jsp/error.jsp" />
+  </definition>
+  <definition name="sqlerror" extends="commonPage">
+    <put-attribute name="title" value="DemoProject : Error page" />
+    <put-attribute name="body" value="/WEB-INF/jsp/sqlerror.jsp" />
+  </definition>
+  
+  
+ <!--  
+  <definition name="*" extends="commonPage">
+    <put-attribute name="title" value="DemoProject : {1}" />
+    <put-attribute name="body" value="/WEB-INF/jsp/{1}.jsp" />
+  </definition>
+  
+  <definition name="*/*" extends="commonPage">
+    <put-attribute name="title" value="DemoProject : {1}/{2}" />
+    <put-attribute name="body" value="/WEB-INF/jsp/{1}/{2}.jsp" />
+  </definition>
+ -->
+</tiles-definitions>
